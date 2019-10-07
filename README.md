@@ -26,6 +26,14 @@ For more specific documentation to the APIs available, including endpoints, requ
 
 
 
+## Language Support
+
+BigDataCloud APIs now offer Locality information in a number of languages.
+Please see the example below for how to set the API language.
+[Click here For a list of all supported languages, and their respective codes.](https://www.bigdatacloud.com/supported-languages)
+
+
+
 ## Authentication / Identification
 
 To use this API client you must have a BigDataCloud API Key.
@@ -65,9 +73,21 @@ See the example below.
 
 	//vanilla implementation
 	var client=new BDCApiClient(apiKey);
+
+    /* You can set the default api language as needed */
+    client.localityLanguage='es';
+
 	client.call(
+        /* api endpoint */
 		'ip-geolocation-full',
-		{'ip':'8.8.8.8'},
+
+        /* api query parameters */
+		{
+            'ip':'8.8.8.8',
+            /* You can override the default api language on a per-query basis
+            *  This is an optional parameter on all API calls */
+            'localityLanguage':'zh'
+        },
 		function(jsonResult) {
 			console.log('Vanilla result',jsonResult);
 		},
@@ -83,7 +103,8 @@ See the example below.
 			$.BDCApi('ip-geolocation-full',{
 				data:{
 					ip:'8.8.8.8',
-					key:apiKey
+					key:apiKey,
+                    localityLanguage:'en'
 				},
 				success:function(jsonResult) {
 					console.log('jQuery result',jsonResult);
