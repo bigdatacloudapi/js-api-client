@@ -37,12 +37,12 @@ Please see the example below for how to set the API language.
 ## Authentication / Identification
 
 To use this API client you must have a BigDataCloud API Key.
-To get your personal key, just access your account and retrieve it from your [Account Dashboard](https://www.bigdatacloud.net/customer/account).
+To get your personal key, please access your account and retrieve it from your [Account Dashboard](https://www.bigdatacloud.net/customer/account).
 If you are not yet a customer, it is completely free to join.
 
-Simply provide this key when initiating the api client, and it will be included in all requests to the BigDataCloud API Server.
+Provide this key when initiating the api client, and it will be included in all requests to the BigDataCloud API Server.
 If using the jQuery quick caller, you can provide the key in each request by appending the key parameter to the request payload.
-See the example below.
+See the examples below.
 
 
 
@@ -71,50 +71,50 @@ See the example below.
 
 	var apiKey='XXX'; // Your api key found at: https://www.bigdatacloud.net/customer/account
 
-	//vanilla implementation
-	var client=new BDCApiClient(apiKey);
+    //vanilla implementation
+    var client=new BDCApiClient(apiKey);
 
     /* You can set the default api language as needed */
     client.localityLanguage='es';
 
-	client.call(
+    client.call(
         /* api endpoint */
-		'ip-geolocation-full',
+        'ip-geolocation-full',
 
         /* api query parameters */
-		{
+        {
             'ip':'8.8.8.8',
             /* You can override the default api language on a per-query basis
             *  This is an optional parameter on all API calls */
             'localityLanguage':'zh'
         },
-		function(jsonResult) {
-			console.log('Vanilla result',jsonResult);
-		},
-		function(err,code) {
-			console.log('Vanilla error',err,code);
-		}
-	);
+        function(jsonResult) {
+            console.log('Vanilla result',jsonResult);
+        },
+        function(err,code) {
+            console.log('Vanilla error',err,code);
+        }
+    );
 
 
-	//jQuery implementation
-	if (typeof jQuery != 'undefined') {
-		(function($) {
-			$.BDCApi('ip-geolocation-full',{
-				data:{
-					ip:'8.8.8.8',
-					key:apiKey,
+    //jQuery implementation
+    if (typeof jQuery != 'undefined') {
+        (function($) {
+            $.BDCApi('ip-geolocation-full',{
+                data:{
+                    ip:'8.8.8.8',
+                    key:apiKey,
                     localityLanguage:'en'
-				},
-				success:function(jsonResult) {
-					console.log('jQuery result',jsonResult);
-				},
-				error:function(error,code) {
-					console.error('jQuery eror',error,code);
-				}
-			});
-		})(jQuery);
-	}
+                },
+                success:function(jsonResult) {
+                    console.log('jQuery result',jsonResult);
+                },
+                error:function(error,code) {
+                    console.error('jQuery eror',error,code);
+                }
+            });
+        })(jQuery);
+    }
 
 </script>
 ```
