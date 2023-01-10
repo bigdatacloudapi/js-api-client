@@ -1,20 +1,20 @@
 # BigDataCloud Javascript API Client
 
 
-A frontend Javascript client for connecting to the API services provided by [BigDataCloud](https://www.bigdatacloud.net)
+A frontend Javascript client for connecting to the API services provided by [BigDataCloud](https://www.bigdatacloud.com)
 This client works in plain Vanilla Javascript and also adds easy access if jQuery is available.
 
 
 
-## What API services does [BigDataCloud](https://www.bigdatacloud.net) offer?
+## What API services does [BigDataCloud](https://www.bigdatacloud.com) offer?
 
 BigDataCloud offers a range of extremely useful and fast APIs that can be utilised in both backend and frontend scenarios.
 From validating customer input live to the next generation of IP Geolocation technology, BigDataCloud has an API suitable to your needs.
 
-For a full list of APIs, visit our [documentation area](https://www.bigdatacloud.net/ip-geolocation-apis).
+For a full list of APIs, visit our [documentation area](https://www.bigdatacloud.com/docs).
 
 You can access any and all BigDataCloud APIs with a free API Key.
-To get your API Key, just access your account and retrieve it from your [Account Dashboard](https://www.bigdatacloud.net/customer/account).
+To get your API Key, just access your account and retrieve it from your [Account Dashboard](https://www.bigdatacloud.com/account).
 If you are not yet a customer, it is completely free to join.
 
 
@@ -22,7 +22,7 @@ If you are not yet a customer, it is completely free to join.
 ## Documentation
 
 For documentation specific to this api client, please read below.
-For more specific documentation to the APIs available, including endpoints, request and response data, please visit our [documentation area](https://www.bigdatacloud.net/ip-geolocation-apis).
+For more specific documentation to the APIs available, including endpoints, request and response data, please visit our [documentation area](https://www.bigdatacloud.com/docs/ip-geolocation).
 
 
 
@@ -37,7 +37,7 @@ Please see the example below for how to set the API language.
 ## Authentication / Identification
 
 To use this API client you must have a BigDataCloud API Key.
-To get your personal key, please access your account and retrieve it from your [Account Dashboard](https://www.bigdatacloud.net/customer/account).
+To get your personal key, please access your account and retrieve it from your [Account Dashboard](https://www.bigdatacloud.com/account).
 If you are not yet a customer, it is completely free to join.
 
 Provide this key when initiating the api client, and it will be included in all requests to the BigDataCloud API Server.
@@ -69,7 +69,7 @@ See the examples below.
 <script src="https://cdn.jsdelivr.net/gh/bigdatacloudapi/js-api-client@latest/bigdatacloud_api_client.min.js" type="text/javascript"></script>
 <script type="text/javascript">
 
-	var apiKey='XXX'; // Your api key found at: https://www.bigdatacloud.net/customer/account
+	var apiKey='XXX'; // Your api key found at: https://www.bigdatacloud.com/account
 
     //vanilla implementation
     var client=new BDCApiClient(apiKey);
