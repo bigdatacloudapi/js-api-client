@@ -2,7 +2,7 @@
 	var BDC=function(apiKey,nameSpace,server,localityLanguage) {
 		this.apiKey=apiKey;
 		this.nameSpace=nameSpace ? nameSpace : 'data';
-		this.server=server ? server : 'api.bigdatacloud.net';
+		this.server=server ? server : 'api-bdc.net';
 		this.localityLanguage=localityLanguage ? localityLanguage : 'en';
 	};
 	BDC.prototype={

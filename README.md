@@ -24,7 +24,7 @@ You can find more details on the respective API packages page.
 - [Reverse Geocoding Package](https://www.bigdatacloud.com/reverse-geocoding)
 - [Phone & Email Verification Package](https://www.bigdatacloud.com/phone-email-verification)
 - [Network Engineering Package](https://www.bigdatacloud.com/network-engineering), and
-- [Free API Package](https://www.bigdatacloud.com/free-api) (doesn't require account creation and API key)
+- [Free API Package](https://www.bigdatacloud.com/login) (doesn't require account creation and API key)
 
 
 ## Documentation
